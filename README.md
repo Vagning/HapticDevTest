@@ -11,3 +11,7 @@ Haptics avalible:
 - Start
 - Stop
 - Click
+
+#License
+Do what ever you want with this
+
