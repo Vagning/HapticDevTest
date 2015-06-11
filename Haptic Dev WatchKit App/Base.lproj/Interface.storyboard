@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="8121.17" systemVersion="14D136" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8101.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="8066.14"/>
+    </dependencies>
+    <scenes>
+        <!--InterfaceController-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller identifier="InterfaceController" id="AgC-eL-Hgc" customClass="InterfaceController" customModule="Haptic_Dev_WatchKit_Extension">
+                    <items>
+                        <button width="1" alignment="left" title="Notification" id="4Er-M6-3Dx">
+                            <connections>
+                                <action selector="playNH" destination="AgC-eL-Hgc" id="wNI-PG-uT0"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="left" title="Up" id="4OW-Aa-fmr">
+                            <connections>
+                                <action selector="playUH" destination="AgC-eL-Hgc" id="mwX-tR-Dm3"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="left" title="Down" id="ajf-u4-vam">
+                            <connections>
+                                <action selector="playDH" destination="AgC-eL-Hgc" id="0ww-Qn-uUz"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="left" title="Success" id="cMo-H0-1S2">
+                            <connections>
+                                <action selector="playSuH" destination="AgC-eL-Hgc" id="xHu-eJ-ef1"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="left" title="Failure" id="mEY-rr-mRK">
+                            <connections>
+                                <action selector="playFH" destination="AgC-eL-Hgc" id="nXE-sH-COg"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="left" title="Retry" id="fJc-1P-yyp">
+                            <connections>
+                                <action selector="playRH" destination="AgC-eL-Hgc" id="mpJ-Be-B6j"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="left" title="Start" id="Nzz-0D-0sL">
+                            <connections>
+                                <action selector="playSH" destination="AgC-eL-Hgc" id="5Ku-jH-Scx"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="left" title="Stop" id="cos-GZ-gfS">
+                            <connections>
+                                <action selector="playSpH" destination="AgC-eL-Hgc" id="yJV-16-iEz"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="left" title="Click" id="vSa-q2-FGh">
+                            <connections>
+                                <action selector="playCH" destination="AgC-eL-Hgc" id="6me-Ee-3zp"/>
+                            </connections>
+                        </button>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="220" y="276.5"/>
+        </scene>
+        <!--Static Notification Interface Controller-->
+        <scene sceneID="AEw-b0-oYE">
+            <objects>
+                <notificationController id="YCC-NB-fut">
+                    <items>
+                        <label alignment="left" text="Alert Label" id="IdU-wH-bcW"/>
+                    </items>
+                    <notificationCategory key="notificationCategory" identifier="myCategory" id="JfB-70-Muf"/>
+                    <connections>
+                        <outlet property="notificationAlertLabel" destination="IdU-wH-bcW" id="JKC-fr-R95"/>
+                        <segue destination="4sK-HA-Art" kind="relationship" relationship="dynamicNotificationInterface" id="kXh-Jw-8B1"/>
+                    </connections>
+                </notificationController>
+            </objects>
+            <point key="canvasLocation" x="220" y="643"/>
+        </scene>
+        <!--Notification Controller-->
+        <scene sceneID="ZPc-GJ-vnh">
+            <objects>
+                <controller id="4sK-HA-Art" customClass="NotificationController" customModule="Haptic_Dev_WatchKit_App" customModuleProvider="target"/>
+            </objects>
+            <point key="canvasLocation" x="468" y="643"/>
+        </scene>
+    </scenes>
+</document>
